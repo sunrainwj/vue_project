@@ -229,7 +229,7 @@
                 
             },
             //确认提交修改参数
-            editParams(){
+            editParams(){  
                 this.$refs.editInforef.validate(async valid => {
                     if(!valid) return
                         const {data:res} = await this.$http.put(`categories/${this.cateId}/attributes/${this.editParamsInfo.attr_id}`,{
